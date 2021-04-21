@@ -2,4 +2,4 @@
  Это задание, которое мне прислали на должность Junior Unity Developer
 
 
-[![Watch the video](https://i.imgur.com/vKb2F1B.png)](https://www.youtube.com/watch?v=qK9zxRXgVYo)
+[![Watch the video](https://img.youtube.com/vi/watch?v=qK9zxRXgVYo/maxresdefault.jpg)](https://www.youtube.com/watch?v=qK9zxRXgVYo)
