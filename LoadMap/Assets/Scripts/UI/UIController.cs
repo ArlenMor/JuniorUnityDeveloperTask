@@ -6,7 +6,7 @@ using Core;
 
 namespace UI
 {
-    //класс для работы с UI
+    //РєР»Р°СЃСЃ РґР»СЏ СЂР°Р±РѕС‚С‹ СЃ UI
     public class UIController : MonoBehaviour
     {
         [SerializeField]
@@ -14,7 +14,7 @@ namespace UI
         [SerializeField]
         private Camera cam;
         
-        //создать панель с информацией
+        //СЃРѕР·РґР°С‚СЊ РїР°РЅРµР»СЊ СЃ РёРЅС„РѕСЂРјР°С†РёРµР№
         public void CreatePanel()
         {
             GameSettings.canMoveCamera = false;

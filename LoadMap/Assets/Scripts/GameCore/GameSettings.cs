@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace Core
 {
-    //класс для хранения различных глобальных игровых настроек
+    //РєР»Р°СЃСЃ РґР»СЏ С…СЂР°РЅРµРЅРёСЏ СЂР°Р·Р»РёС‡РЅС‹С… РіР»РѕР±Р°Р»СЊРЅС‹С… РёРіСЂРѕРІС‹С… РЅР°СЃС‚СЂРѕРµРє
     public static class GameSettings
     {
         public static bool canMoveCamera = true;

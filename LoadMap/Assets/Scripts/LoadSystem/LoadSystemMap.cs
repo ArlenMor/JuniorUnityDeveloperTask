@@ -4,11 +4,11 @@ using UnityEngine;
 
 namespace LoadSystem
 {
-    //Статический класс, который занимается выгрузкой всех префабов тайлов из папки Resources
+    //РЎС‚Р°С‚РёС‡РµСЃРєРёР№ РєР»Р°СЃСЃ, РєРѕС‚РѕСЂС‹Р№ Р·Р°РЅРёРјР°РµС‚СЃСЏ РІС‹РіСЂСѓР·РєРѕР№ РІСЃРµС… РїСЂРµС„Р°Р±РѕРІ С‚Р°Р№Р»РѕРІ РёР· РїР°РїРєРё Resources
     public static class LoadSystemMap
     {
 
-        //путь к папке с префабами в папке Resources
+        //РїСѓС‚СЊ Рє РїР°РїРєРµ СЃ РїСЂРµС„Р°Р±Р°РјРё РІ РїР°РїРєРµ Resources
         private const string Path = "Sprites/BGPrefabs";
         
         static private Object[] s_Tiles;

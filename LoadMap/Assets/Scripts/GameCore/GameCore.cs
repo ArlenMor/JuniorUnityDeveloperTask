@@ -10,8 +10,8 @@ using LoadSystem;
 namespace Core
 {
 
-	//основной класс
-	//В нем происходит загрузка файлов из папки Resources, чтение из Json и отрисовка карты
+	//РѕСЃРЅРѕРІРЅРѕР№ РєР»Р°СЃСЃ
+	//Р’ РЅРµРј РїСЂРѕРёСЃС…РѕРґРёС‚ Р·Р°РіСЂСѓР·РєР° С„Р°Р№Р»РѕРІ РёР· РїР°РїРєРё Resources, С‡С‚РµРЅРёРµ РёР· Json Рё РѕС‚СЂРёСЃРѕРІРєР° РєР°СЂС‚С‹
 	public class GameCore : MonoBehaviour
 	{
 
@@ -24,7 +24,7 @@ namespace Core
 
 		private void Awake()
 		{
-			//выгрузка префабов
+			//РІС‹РіСЂСѓР·РєР° РїСЂРµС„Р°Р±РѕРІ
 			LoadSystemMap.Init();
 		}
 
@@ -32,23 +32,23 @@ namespace Core
 		{
 			cam = GetComponent<Camera>();
 			
-			//Загружаем все имена тайлов и их параметры из Json в список Tiles
+			//Р—Р°РіСЂСѓР¶Р°РµРј РІСЃРµ РёРјРµРЅР° С‚Р°Р№Р»РѕРІ Рё РёС… РїР°СЂР°РјРµС‚СЂС‹ РёР· Json РІ СЃРїРёСЃРѕРє Tiles
 			LoadFromFile();
-			//печать в Log всей инфы о тайлах
+			//РїРµС‡Р°С‚СЊ РІ Log РІСЃРµР№ РёРЅС„С‹ Рѕ С‚Р°Р№Р»Р°С…
 			//Print();
-			//Отрисовываем тайлы
+			//РћС‚СЂРёСЃРѕРІС‹РІР°РµРј С‚Р°Р№Р»С‹
 			Draw();
 		}
 		private void LoadFromFile()
 		{
-			//Проверяю существует ли файл
+			//РџСЂРѕРІРµСЂСЏСЋ СЃСѓС‰РµСЃС‚РІСѓРµС‚ Р»Рё С„Р°Р№Р»
 			if(!File.Exists(loadPath))
 			{
 				Debug.Log("{GameLog} => [GameCore] - LoadFromFile => File not Found");
 				return;
 			}
 
-			//выгружаем все
+			//РІС‹РіСЂСѓР¶Р°РµРј РІСЃРµ
 			string json = File.ReadAllText(loadPath);
 			MyJson Info = JsonUtility.FromJson<MyJson>(json);
 
@@ -59,12 +59,12 @@ namespace Core
 
 		private void Draw()
 		{
-			//Сравниваем имена тайлов из Json и имена префабов из папки Resources
+			//РЎСЂР°РІРЅРёРІР°РµРј РёРјРµРЅР° С‚Р°Р№Р»РѕРІ РёР· Json Рё РёРјРµРЅР° РїСЂРµС„Р°Р±РѕРІ РёР· РїР°РїРєРё Resources
 			foreach (Tile tile in Tiles)
 			{
 				foreach(var sprite in LoadSystemMap.Tiles)
 				{
-					//Если имя совпадает, то отрисовываем объект и избавляемся от приставки Clone() в имени объекта
+					//Р•СЃР»Рё РёРјСЏ СЃРѕРІРїР°РґР°РµС‚, С‚Рѕ РѕС‚СЂРёСЃРѕРІС‹РІР°РµРј РѕР±СЉРµРєС‚ Рё РёР·Р±Р°РІР»СЏРµРјСЃСЏ РѕС‚ РїСЂРёСЃС‚Р°РІРєРё Clone() РІ РёРјРµРЅРё РѕР±СЉРµРєС‚Р°
 					if (tile.Id == sprite.name)
 					{
 						GameObject obj = (GameObject)Instantiate(sprite, new Vector3(tile.X, tile.Y, 0.0f), Quaternion.identity);
